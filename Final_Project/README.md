@@ -2,7 +2,7 @@
 
 Author: Hanyang Liu  
 Course: University of Michigan — STAT 507 Data Science & Analytics in Python  
-Project Type: Machine Learning Classification Pipeline and IEEE-style Report
+Project Type: Machine Learning Classification Pipeline Report
 
 ## Overview
 
@@ -15,11 +15,9 @@ All results in the final report can be reproduced using the notebooks provided i
 
 The repository includes:
 
-- A data folder containing training data, test data, and prediction outputs.
-- A Graphs folder containing all figures used in the report, including categorical distributions, confusion matrices, model comparison plots, and the project workflow diagram.
-- A notebooks folder containing:
-  - The main pipeline notebook for end-to-end processing and model training.
-  - A supplementary notebook for additional visualization.
+1. A data folder containing training data, test data, and prediction outputs.
+2. A Graphs folder containing all figures used in the report, including categorical distributions, confusion matrices, model comparison plots, and the project workflow diagram.
+3. A notebooks folder containing: The main pipeline notebook for end-to-end processing and model training; A supplementary notebook for additional visualization.
 
 ## Environment Requirements
 
@@ -31,15 +29,13 @@ numpy
 matplotlib  
 scikit-learn  
 
-These can optionally be listed in a requirements.txt file.
-
 ## How to Run the Project
 
 ### Main Pipeline
 
 Open and run the notebook:
 
-notebooks/Final Project.ipynb
+notebooks/Final_Project_pipeline.ipynb
 
 This notebook performs data loading, preprocessing, encoding, model training, hyperparameter tuning, evaluation, and prediction generation.  
 Prediction results are written to the file:
@@ -52,7 +48,7 @@ All figures used in the final report are saved into the Graphs folder automatica
 
 Open and run the notebook:
 
-notebooks/Additional codes for visualization.ipynb
+notebooks/Additional_visualization.ipynb
 
 This notebook generates supplementary plots for variables such as Married, Dependents, Education, and Gender.  
 Generated images are saved in the Graphs folder.
@@ -87,7 +83,7 @@ Generated automatically by the main pipeline notebook.
 
 To reproduce results:
 
-1. Open notebooks/Final Project.ipynb  
+1. Open notebooks/Final_Project_pipeline.ipynb  
 2. Restart the kernel  
 3. Run all cells in sequential order  
 4. Ensure the folder structure is unchanged  

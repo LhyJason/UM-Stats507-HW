@@ -1,134 +1,102 @@
-Loan Eligibility Assessment — STAT 507 Final Project
+# Loan Eligibility Assessment — STAT 507 Final Project
 
-Author: Hanyang Liu
-Course: UMich STAT 507 — Data Science & Analytics in Python
-Project Type: IEEE-style Final Project (Machine Learning Pipeline)
+Author: Hanyang Liu  
+Course: University of Michigan — STAT 507 Data Science & Analytics in Python  
+Project Type: Machine Learning Classification Pipeline and IEEE-style Report
 
-Overview
+## Overview
 
-This project builds a complete machine learning system to predict loan eligibility using demographic and financial attributes from the Kaggle loan dataset.
-Three classification models were implemented and compared:
+This project develops a complete machine learning pipeline for predicting loan eligibility using demographic and financial attributes from the Kaggle loan dataset.  
+Three machine learning models are implemented: Logistic Regression, Decision Tree, and Random Forest with hyperparameter tuning.  
+The workflow includes preprocessing, visualization, model training, evaluation, and the generation of prediction outputs.  
+All results in the final report can be reproduced using the notebooks provided in this project.
 
-Logistic Regression
+## Repository Contents
 
-Decision Tree
+The repository includes:
 
-Random Forest (with GridSearchCV tuning)
+- A data folder containing training data, test data, and prediction outputs.
+- A Graphs folder containing all figures used in the report, including categorical distributions, confusion matrices, model comparison plots, and the project workflow diagram.
+- A notebooks folder containing:
+  - The main pipeline notebook for end-to-end processing and model training.
+  - A supplementary notebook for additional visualization.
 
-The workflow includes preprocessing, visualization, model training, evaluation, and test-set prediction.
-All results shown in the final report are fully reproducible using the notebooks in this directory.
+## Environment Requirements
 
-Project Structure
-Final_Project/
-│
-├── data/
-│     ├── loan-train.csv                 # Training dataset
-│     ├── loan-test.csv                  # Test dataset
-│     └── loan-test-predictions.csv      # Prediction output file
-│
-├── Graphs/
-│     ├── categorical_distributions.png
-│     ├── confusion_matrix_rf.png
-│     ├── Dependents.png
-│     ├── Education.png
-│     ├── Flow_graph.png
-│     ├── Gender.png
-│     ├── Married.png
-│     ├── model_performance_comparison.png
-│     └── rf_tuning_curve.png
-│
-├── notebooks/
-│     ├── Final Project.ipynb            # Main end-to-end ML workflow
-│     └── Additional codes for visualization.ipynb
-│
-└── README.md                            # (This file)
+Recommended Python environment:
 
-Environment Requirements
-python >= 3.9
-pandas
-numpy
-matplotlib
-scikit-learn
+python >= 3.9  
+pandas  
+numpy  
+matplotlib  
+scikit-learn  
 
+## How to Run the Project
 
-How to Run the Project
-1. Run the main pipeline
+### Main Pipeline
 
-Open:
+Open and run the notebook:
 
 notebooks/Final Project.ipynb
 
-
-This notebook performs:
-
-Data loading & preprocessing
-
-Encoding categorical variables
-
-Training Logistic Regression / Decision Tree / Random Forest
-
-Random Forest hyperparameter tuning
-
-Evaluation & visualization
-
-Prediction generation on loan-test.csv
-
-Saving results to:
+This notebook performs data loading, preprocessing, encoding, model training, hyperparameter tuning, evaluation, and prediction generation.  
+Prediction results are written to the file:
 
 data/loan-test-predictions.csv
 
+All figures used in the final report are saved into the Graphs folder automatically.
 
-All figures used in the final report are saved into:
+### Additional Visualization
 
-Graphs/
-
-2. Supplementary Visualization
-
-Open:
+Open and run the notebook:
 
 notebooks/Additional codes for visualization.ipynb
 
+This notebook generates supplementary plots for variables such as Married, Dependents, Education, and Gender.  
+Generated images are saved in the Graphs folder.
 
-This notebook includes additional plots for:
+## Key Model Results
 
-Married
+Logistic Regression  
+Accuracy: 0.6992  
+Recall (Class 1): 0.03  
+F1-score (Class 1): 0.05  
 
-Dependents
+Decision Tree  
+Accuracy: 0.7398  
+Recall (Class 1): 0.53  
+F1-score (Class 1): 0.56  
 
-Education
+Random Forest  
+Accuracy: 0.8130  
+Recall (Class 1): 0.47  
+F1-score (Class 1): 0.61  
 
-Gender
+Class 1 corresponds to the minority "Not Approved" category.  
+Random Forest demonstrates the strongest balanced performance.
 
-Stored in:
+## Output Files
 
-Graphs/
+loan-test-predictions.csv  
+Contains predicted approval labels and probability estimates for each applicant.  
+Generated automatically by the main pipeline notebook.
 
-Key Results
-Model	Accuracy	Recall (Class 1)	F1-score (Class 1)
-Logistic Regression	0.6992	0.03	0.05
-Decision Tree	0.7398	0.53	0.56
-Random Forest	0.8130	0.47	0.61
+## Reproducibility Notes
 
-Random Forest provides the strongest and most balanced predictive performance.
+To reproduce results:
 
-Output File
+1. Open notebooks/Final Project.ipynb  
+2. Restart the kernel  
+3. Run all cells in sequential order  
+4. Ensure the folder structure is unchanged  
+5. The notebook will save figures and output files automatically  
 
-loan-test-predictions.csv contains:
+Relative paths are used for compatibility across machines and GitHub.
 
-predicted approval labels (Y/N)
+## References
 
-probability estimates for both classes
+All references follow IEEE format and appear in the final project report.
 
-This file is generated automatically by the main notebook.
+## Final Remarks
 
-Reproducibility Notes
-
-To fully reproduce results:
-
-Open notebooks/Final Project.ipynb
-
-Restart Kernel
-
-Run all cells
-
-Ensure directory structure remains unchanged
+This repository includes all required components for the STAT 507 Final Project, including a documented machine learning pipeline, reproducible computations, visualization artifacts, and prediction outputs.

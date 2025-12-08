@@ -79,17 +79,26 @@ loan-test-predictions.csv
 Contains predicted approval labels and probability estimates for each applicant.  
 Generated automatically by the main pipeline notebook.
 
-## Reproducibility Notes
+## Reproducibility Statement
 
-To reproduce results:
+This project is fully reproducible. All code, datasets, and generated figures are included in the repository.  
+Both notebooks use relative paths that reference the `data/` and `Graphs/` directories, enabling the workflow to run consistently across different machines, including the TA evaluation environment.
 
-1. Open notebooks/Final_Project_pipeline.ipynb  
-2. Restart the kernel  
-3. Run all cells in sequential order  
-4. Ensure the folder structure is unchanged  
-5. The notebook will save figures and output files automatically  
+To reproduce all results:
 
-Relative paths are used for compatibility across machines and GitHub.
+1. Open `notebooks/Final_Project_pipeline.ipynb`.
+2. Restart the kernel and run all cells sequentially.
+3. The notebook will:
+   - preprocess the training and test data,
+   - train all machine learning models,
+   - perform Random Forest hyperparameter tuning,
+   - generate all evaluation figures, and
+   - save predictions to `data/loan-test-predictions.csv`.
+
+The additional visualization notebook (`notebooks/Additional_visualization.ipynb`) is also fully reproducible and reads/writes exclusively from the `Graphs/` directory.  
+No external data sources or absolute file paths are used.  
+All results shown in the final report can be regenerated exactly using the provided notebooks.
+
 
 ## References
 
